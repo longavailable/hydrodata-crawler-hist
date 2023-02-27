@@ -9,7 +9,6 @@ on:
 
 jobs: 
   crawl-hbsl:
-    needs: crawl-datong
     runs-on: ubuntu-latest	# access from github ip (us)
     steps:
 
