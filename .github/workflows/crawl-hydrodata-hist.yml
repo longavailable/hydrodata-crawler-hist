@@ -1,11 +1,9 @@
 name: Crawl hydrodata schedulely
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
   schedule:
-    - cron: '8 17 * * *' # runs at 17:08 UTC every day
+    - cron: '8 22 * * *' # runs at 22:08 UTC every day
 
 jobs: 
   crawl-hbsl:
@@ -24,9 +22,8 @@ jobs:
         
       - name: checkout tool repo
         uses: actions/checkout@v3
-        with: 
-          repository: longavailable/python-toolbox
-          token: ${{ secrets.HYDRODATA_TOKEN }}
+        with:
+          repository: longavailable/longs-python-toolbox
           path: mytool
           
       - name: setup python
