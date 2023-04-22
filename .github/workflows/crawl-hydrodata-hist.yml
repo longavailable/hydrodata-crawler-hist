@@ -3,7 +3,7 @@ name: Crawl hydrodata schedulely
 on:
   workflow_dispatch:
   schedule:
-    - cron: '8 22 * * *' # runs at 22:08 UTC every day
+    - cron: '8 10 * * *' # runs at 22:08 UTC every day
 
 jobs: 
   crawl-hbsl:
